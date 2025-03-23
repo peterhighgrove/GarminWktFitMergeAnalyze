@@ -1,0 +1,27 @@
+//--- WINTER time = 1, SUMMER time = 2
+hoursToAdd 1
+
+filePathPrefix C:\Users\peter\Downloads\
+//filePathPrefix C:\\Users\\peter\\OneDrive\\Dokument Peter OneDrive\\Träning\\ActivityFiles\\Peter activities\\2025q1\\
+//filePathPrefix /storage/emulated/0/download/
+
+inputFilePath aaa.zip
+extraFilename 
+
+profileNameSuffix Friskis Orminge
+//profileNameSuffix gym jobbet
+
+//--- Assign in MINUTES here
+timeOffsetSec 3
+
+//---- COMMAND
+//command wkt
+
+//--- Allowed: allActive, warmupThenActive, restThenActive, activeThenRest, noChange
+startWithWktStep noChange
+//startWithWktStep allActive
+//newWktName uppv 4x3/1min
+newWktName löptest
+
+//command corr
+//C2FitFileDistanceStartCorrection 256
