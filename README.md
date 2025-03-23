@@ -13,7 +13,8 @@ After that create a new FIT file that can be imported to Garmin Connect (GC).
 - Threadmill (merges from manual laps file)
 
 **Example analyze file:**
-<code>---- ACTIVE LAPS ----
+<code>
+---- ACTIVE LAPS ----
 Lap2 HRmin90>st120+20->max140 end139 5min 62spm 2:18min/500m 134W 1.1km df111 sl0.6
 Lap4 HRmin113>st121+22->max143 end141 4min 63spm 2:16min/500m 139W 0.9km df111 sl0.64
 Lap6 HRmin117>st125+20->max145 end145 3min 64spm 2:12min/500m 148W 0.7km df111 sl0.65
@@ -39,13 +40,15 @@ Lap21 HRst146>max146-25->min121 end123 2min 50spm 3:41min/500m 43W 0.3km
 avgCad: 53spm, avgPace: 3:19min/500m, avgPow: 53W, lapDist: 2.1km
 </code>
 **Example manual laps.txt fil (level <space> 10th meter <space> comment)**
-  9 080
-  10 148 1
-  9 166
-  10 235 2
-  9 252
-  11 323 3
-  9 340
-  11 410
-  9 426
-  8 521
+<code>
+9 080
+10 148 1
+9 166
+10 235 2
+9 252
+11 323 3
+9 340
+11 410
+9 426
+8 521
+</code>
