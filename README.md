@@ -14,10 +14,10 @@ After that create a new FIT file that can be imported to Garmin Connect (GC).
 
 **Example analyze file:**<br>
 <code>
----- ACTIVE LAPS ----
-Lap2 HRmin90>st120+20->max140 end139 5min 62spm 2:18min/500m 134W 1.1km df111 sl0.6
-Lap4 HRmin113>st121+22->max143 end141 4min 63spm 2:16min/500m 139W 0.9km df111 sl0.64
-Lap6 HRmin117>st125+20->max145 end145 3min 64spm 2:12min/500m 148W 0.7km df111 sl0.65
+---- ACTIVE LAPS ----<br>
+Lap2 HRmin90>st120+20->max140 end139 5min 62spm 2:18min/500m 134W 1.1km df111 sl0.6<br>
+Lap4 HRmin113>st121+22->max143 end141 4min 63spm 2:16min/500m 139W 0.9km df111 sl0.64<br>
+Lap6 HRmin117>st125+20->max145 end145 3min 64spm 2:12min/500m 148W 0.7km df111 sl0.65<br>
 Lap8 HRmin121>st129+16->max145 end144 2min 65spm 2:11min/500m 151W 0.5km df111 sl0.63
 Lap10 HRmin129>st130+12->max142 end142 1min 68spm 2:09min/500m 167W 0.2km df112 sl0.66
 Lap12 HRmin139>st140+9->max148 end148 1min 69spm 2:06min/500m 173W 0.2km df111 sl0.68
