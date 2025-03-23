@@ -10,7 +10,7 @@ After that create a new FIT file that can be imported to Garmin Connect (GC).
 - SkiErg (merges CIQ app data and Concept2 FIT file)
 - Elliptical (merges from manual laps file)
 - Gymbike (merges from manual laps file)
-- Threadmill (merges from manual laps file)
+- Treadmill (merges from manual laps file)
 
 **Example analyze file:**
 <code>
