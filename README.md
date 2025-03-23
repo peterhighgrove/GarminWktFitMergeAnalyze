@@ -1,7 +1,7 @@
-Using Garmin FIT SDK to merge in data from manual laps file or SkiErg data to analyze garmin FIT file. For instance correct distance data.
+Using Garmin FIT SDK to merge in data from manual laps file for cardio activities or Concept2 file and CIQ data for SkiErg activities to analyze garmin FIT file. For instance to get correct distance data in native distance field.
 After that create a new FIT file that can be imported to Garmin Connect (GC).
 
-**General features**
+**Some general features**
 - Adding a configurable number of minutes to file to be able to import it again to GC.
 - Correcting cadence unrealistic peaks
 - Correcting empty start values
