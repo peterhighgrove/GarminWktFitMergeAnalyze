@@ -5,6 +5,7 @@ After that create a new FIT file that can be imported to Garmin Connect (GC).
 - Adding a configurable number of minutes to file to be able to import it again to GC.
 - Correcting cadence unrealistic peaks
 - Correcting empty start values
+- Can be configured with args or conf.txt file.
 
 **Sport apps handled**
 - SkiErg (merges CIQ app data and Concept2 FIT file)
