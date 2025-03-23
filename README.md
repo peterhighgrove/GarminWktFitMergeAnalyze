@@ -12,7 +12,7 @@ After that create a new FIT file that can be imported to Garmin Connect (GC).
 - Gymbike (merges from manual laps file)
 - Treadmill (merges from manual laps file)
 
-**Example analyze file:**
+**Example analyze file:**<br>
 <code>
 ---- ACTIVE LAPS ----
 Lap2 HRmin90>st120+20->max140 end139 5min 62spm 2:18min/500m 134W 1.1km df111 sl0.6
