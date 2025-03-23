@@ -39,7 +39,7 @@ Lap19 HRst148>max148-29->min119 end121 2min 52spm 3:52min/500m 33W 0.3km
 Lap21 HRst146>max146-25->min121 end123 2min 50spm 3:41min/500m 43W 0.3km
 avgCad: 53spm, avgPace: 3:19min/500m, avgPow: 53W, lapDist: 2.1km
 </code>
-**Example manual laps.txt fil (level <space> 10th meter <space> comment)**
+**Example manual laps.txt fil (level (space) 10th-of-meter (space) comment)**
 <code>
 9 080
 10 148 1
