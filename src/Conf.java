@@ -17,7 +17,8 @@ public class Conf {
 	String startWithWktStep = "";
 	String newWktName = "";
 	int C2FitFileDistanceStartCorrection = 0;
-
+	int syncSecC2File = 0;
+	int syncSecLapDistCalc = 0;
 	public Conf () {
 
 		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
@@ -64,6 +65,12 @@ public class Conf {
 								break;
 							case "C2FitFileDistanceStartCorrection":
 								C2FitFileDistanceStartCorrection = Integer.parseInt(value);
+								break;
+							case "syncSecC2File":
+								syncSecC2File = Integer.parseInt(value);
+								break;
+							case "syncSecLapDistCalc":
+								syncSecLapDistCalc = Integer.parseInt(value);
 								break;
 						
 						

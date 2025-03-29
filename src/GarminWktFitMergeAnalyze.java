@@ -3,7 +3,7 @@
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
- 
+
  
 public class GarminWktFitMergeAnalyze {
 
@@ -81,6 +81,8 @@ public class GarminWktFitMergeAnalyze {
         System.out.println("startWithWktStep: "+conf.startWithWktStep);
         System.out.println("newWktName: "+conf.newWktName);
         System.out.println("C2FitFileDistanceStartCorrection: "+conf.C2FitFileDistanceStartCorrection);
+        System.out.println("syncSecC2File "+conf.syncSecC2File);
+        System.out.println("syncSecLapDistCalc "+conf.syncSecLapDistCalc);
         System.out.println("+++++++++++++++++++++++++++++++++++");
 
 
@@ -178,7 +180,7 @@ public class GarminWktFitMergeAnalyze {
                 //watchFitFile.addDevFieldDescr();
 
                 watchFitFile.mergeC2CiqAndFitData(c2FitFile, conf.C2FitFileDistanceStartCorrection);
-                watchFitFile.calcLapDataFromSecRecordsSkiErg();
+                watchFitFile.calcLapDataFromSecRecordsSkiErg(conf.syncSecC2File, conf.syncSecLapDistCalc);
                 watchFitFile.setNewSportSkiErg();
                 //watchFitFile.changeDeveloper(watchFitFile);
                 watchFitFile.removeDevFieldDescr();

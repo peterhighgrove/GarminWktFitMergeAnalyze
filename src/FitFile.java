@@ -753,6 +753,16 @@ public class FitFile {
             //--------------
             // Initiate secExtraRecords
             secExtraRecords.add(new RecordExtraMesg(lapNo, C2DateTime));
+            
+            //--------------
+            // Look for HR drop outs
+            
+            if (record.getHeartRate() == null) {
+            	System.out.println(">>>>>>> HR EMPTY.  recordIx:"+recordIx);
+            	if (recordIx>0) {
+            		record.setHeartRate(secRecords.get(recordIx-1).getHeartRate());
+            	}
+            }
 
             // =========== MERGE/Import CIQ data to native =============
             // =========================================================
@@ -967,7 +977,7 @@ public class FitFile {
         }
     }
     //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    public void calcLapDataFromSecRecordsSkiErg() {
+    public void calcLapDataFromSecRecordsSkiErg(int syncSecC2File, int syncSecLapDistCalc) {
         int recordIx = 0;
         int lapIx = 0;
         int lapNo = 1;
@@ -1045,9 +1055,12 @@ public class FitFile {
                 lapRecords.get(lapIx).setMaxSpeed(record.getEnhancedSpeed());
                 //System.out.println("-----recIx:"+recordIx+" lapIx:"+lapIx+" Sp:"+record.getEnhancedSpeed()+"m/s "+mps2kmph(record.getEnhancedSpeed())+"km/h");
             }
-            if (recordIx<(numberOfRecords-3)) {
-                currentLapSumCadence += secRecords.get(recordIx+2).getCadence();
-                currentLapSumPower += secRecords.get(recordIx+2).getPower();
+            
+            //--------------
+            // Calc LAPSUM MAX CAD POWER
+            if (recordIx<(numberOfRecords-syncSecC2File-1)) {
+                currentLapSumCadence += secRecords.get(recordIx+syncSecC2File).getCadence();
+                currentLapSumPower += secRecords.get(recordIx+syncSecC2File).getPower();
             }
             if (record.getCadence() > lapRecords.get(lapIx).getMaxCadence()) {
                 lapRecords.get(lapIx).setMaxCadence(record.getCadence());
@@ -1109,9 +1122,11 @@ public class FitFile {
                 lapExtraRecords.get(lapIx).timeEnd = record.getTimestamp();
 
                 // Calc LAP DISTANCE & AVG SPEED
-                //if (lapNo < numberOfLaps) {
-                    lapRecords.get(lapIx).setTotalDistance((float) secRecords.get(recordIx).getDistance() - lastLapTotalDistance);
-                    lastLapTotalDistance = secRecords.get(recordIx).getDistance();
+                if (lapNo == numberOfLaps) {
+                    syncSecLapDistCalc=0;
+                }
+                    lapRecords.get(lapIx).setTotalDistance((float) secRecords.get(recordIx+syncSecLapDistCalc).getDistance() - lastLapTotalDistance);
+                    lastLapTotalDistance = secRecords.get(recordIx+syncSecLapDistCalc).getDistance();
 
                     lapRecords.get(lapIx).setAvgSpeed((float) (lapRecords.get(lapIx).getTotalDistance() / lapRecords.get(lapIx).getTotalTimerTime()));
                     //System.out.println("--- lap: " + lapNo + " dist: " + lapRecords.get(lapIx).getTotalDistance() + " time: " + lapRecords.get(lapIx).getTotalTimerTime() + " speed: "+ (float) (lapRecords.get(lapIx).getAvgSpeed())+" "+(float) (lapRecords.get(lapIx).getTotalDistance() / lapRecords.get(lapIx).getTotalTimerTime()));
